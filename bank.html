@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank deposit withdraw</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-sky-200">
+      <h1 class="text-4xl text-center p-8 font-bold">
+        Let's <span class="text-rose-600">Withdraw and Deposit Money !!!</span>
+      </h1>
+    </header>
+    <main>
+      <section class="mt-5">
+        <div class="grid grid-cols-3 w-9/12 mx-auto gap-4">
+          <div
+            class="bg-green-500 mt-8 rounded-md drop-shadow-md p-6 text-white"
+          >
+            <h3 class="text-3xl">Deposit</h3>
+            <h3 class="text-3xl">
+              Balance: <span class="text-4xl text-bold">$</span
+              ><span id="deposit" class="text-4xl text-bold">00</span>
+            </h3>
+          </div>
+          <div
+            class="bg-rose-500 mt-8 rounded-md drop-shadow-md p-6 text-white"
+          >
+            <h3 class="text-3xl">Withdrawal</h3>
+            <h3 class="text-3xl">
+              Balance: <span class="text-4xl text-bold">$</span>
+              <span id="withdrawn-amount" class="text-4xl text-bold">00</span>
+            </h3>
+          </div>
+          <div
+            class="bg-purple-500 mt-8 rounded-md drop-shadow-md p-6 text-white"
+          >
+            <h3 class="text-3xl">Balance</h3>
+            <h3 class="text-3xl">
+              Balance: <span class="text-4xl text-bold">$</span
+              ><span id="initial-balance" class="text-4xl text-bold">1000</span>
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deposit and withdraw begins-->
+      <section class="mt-5">
+        <div class="grid grid-cols-2 w-9/12 mx-auto gap-4">
+          <div class="bg-purple-400 mt-8 rounded-md drop-shadow-md p-6">
+            <div class="px-9">
+              <h3 class="text-3xl text-white">Please Deposit</h3>
+              <input
+                type="text"
+                name=""
+                id="deposit-money"
+                class="block w-full mt-4 rounded-md py-1 px-2"
+                placeholder="$amount you want to deposit..."
+              />
+              <button
+                id="btn-deposit"
+                class="px-4 py-1 text-sm text-white font-semibold rounded-md border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 bg-green-600 mt-5"
+              >
+                Deposit
+              </button>
+            </div>
+          </div>
+          <div class="bg-green-400 mt-8 rounded-md drop-shadow-md p-6">
+            <div class="px-9">
+              <h3 class="text-3xl text-white">Please Withdraw</h3>
+              <input
+                type="text"
+                name=""
+                id="withdrawn-money"
+                class="block w-full mt-4 rounded-md py-1 px-2"
+                placeholder="$amount you want to withdraw..."
+              />
+              <button
+                id="btn-withdraw"
+                class="px-4 py-1 text-sm text-white font-semibold rounded-md border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 bg-rose-600 mt-5"
+              >
+                Withdraw
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Deposit and withdraw ends-->
+
+      <!-- Footer begins -->
+      <footer class="mt-12 bg-lime-900 text-white text-center px-10 py-6">
+        <span class="text-1xl">@ 2022, All rights reserved</span>
+      </footer>
+      <!-- Footer ends -->
+    </main>
+    <!-- js file linked -->
+    <script src="js/functionalTransaction.js"></script>
+  </body>
+</html>
